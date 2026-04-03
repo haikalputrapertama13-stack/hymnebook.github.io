@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: haikalputrapertama13-stack/hymnebook.github.io
+  branch: main
+media_folder: "images"
+public_folder: "/images"
+collections:
+  - name: "novel"
+    label: "Daftar Novel"
+    folder: "content/novels"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Judul Novel", name: "title", widget: "string"}
+      - {label: "Status", name: "status", widget: "select", options: ["Published", "Coming Soon"]}
+      - {label: "Chapter", name: "chapter", widget: "string", default: "Chapter 1"}
+      - {label: "Sinopsis Singkat", name: "body", widget: "markdown"}
+      - {label: "Link Baca", name: "link", widget: "string"}
